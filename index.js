@@ -7,7 +7,10 @@ const productRoute = require("./routes/product");
 const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/stripe");
+const cors = require('cors');
+app.use(cors());
 app.use(express.json());
+
 mongoose.connect(
     'mongodb+srv://abhishekraushan43:Abhishek@cluster0.snu1yj6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
     {
